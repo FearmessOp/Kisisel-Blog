@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Geliştirme Trendleri 2025 - Kişisel Blog</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/blog-post.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <!-- Tema Değiştirici -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Tema Değiştir">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigasyon -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">KB</a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Ana Sayfa</a>
+                <a href="../blog.html" class="nav-link active">Blog</a>
+                <a href="../about.html" class="nav-link">Hakkımda</a>
+                <a href="../contact.html" class="nav-link">İletişim</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress"></div>
+
+    <!-- Article Header -->
+    <article class="blog-post">
+        <header class="post-header">
+            <div class="container">
+                <div class="post-meta-top animate-fade-in">
+                    <span class="post-category">Teknoloji</span>
+                    <span class="post-date"><i class="far fa-calendar"></i> 15 Ocak 2025</span>
+                    <span class="post-read-time"><i class="far fa-clock"></i> 5 dk okuma</span>
+                </div>
+                <h1 class="post-title animate-slide-up">Modern Web Geliştirme Trendleri 2025</h1>
+                <p class="post-excerpt animate-slide-up-delay">
+                    Web geliştirme dünyasında 2025 yılında öne çıkan trendler ve yeni teknolojiler hakkında detaylı bir inceleme
+                </p>
+                <div class="post-author animate-fade-in-delay">
+                    <img src="https://via.placeholder.com/50x50/667eea/ffffff?text=KB" alt="Yazar">
+                    <div>
+                        <h4>Kişisel Blog</h4>
+                        <p>Full Stack Developer</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Featured Image -->
+        <div class="post-featured-image">
+            <img src="https://via.placeholder.com/1200x600/667eea/ffffff?text=Web+Development+2025" alt="Modern Web Geliştirme">
+        </div>
+
+        <!-- Article Content -->
+        <div class="post-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <p class="lead">
+                        2025 yılı, web geliştirme dünyasında heyecan verici yeniliklerin ve teknolojilerin öne çıktığı bir yıl oldu. 
+                        Bu yazıda, modern web geliştirme trendlerini ve gelecekte bizi nelerin beklediğini inceleyeceğiz.
+                    </p>
+
+                    <h2>1. AI-Powered Development</h2>
+                    <p>
+                        Yapay zeka destekli geliştirme araçları, kod yazma sürecini devrim niteliğinde değiştiriyor. 
+                        GitHub Copilot ve benzeri araçlar, geliştiricilerin verimliliğini artırırken, kod kalitesini de yükseltiyor.
+                    </p>
+
+                    <blockquote>
+                        <p>"AI, geliştiricilerin yerini almıyor, onları daha güçlü hale getiriyor."</p>
+                        <cite>- Tech Industry Leader</cite>
+                    </blockquote>
+
+                    <h2>2. Edge Computing ve Serverless</h2>
+                    <p>
+                        Edge computing ve serverless mimariler, web uygulamalarının performansını ve ölçeklenebilirliğini 
+                        yeni seviyelere taşıyor. Vercel, Netlify ve Cloudflare Workers gibi platformlar bu alanda öncülük ediyor.
+                    </p>
+
+                    <h3>Serverless'ın Avantajları:</h3>
+                    <ul>
+                        <li>Otomatik ölçeklendirme</li>
+                        <li>Düşük maliyet</li>
+                        <li>Yüksek performans</li>
+                        <li>Kolay deployment</li>
+                    </ul>
+
+                    <h2>3. Web3 ve Blockchain Entegrasyonu</h2>
+                    <p>
+                        Merkezi olmayan uygulamalar (dApps) ve blockchain teknolojisi, web geliştirmede yeni fırsatlar yaratıyor. 
+                        MetaMask entegrasyonu, NFT'ler ve DeFi uygulamaları giderek yaygınlaşıyor.
+                    </p>
+
+                    <pre><code class="language-javascript">// Web3 bağlantı örneği
+async function connectWallet() {
+    if (typeof window.ethereum !== 'undefined') {
+        try {
+            const accounts = await window.ethereum.request({ 
+                method: 'eth_requestAccounts' 
+            });
+            console.log('Bağlı cüzdan:', accounts[0]);
+        } catch (error) {
+            console.error('Cüzdan bağlantısı başarısız:', error);
+        }
+    }
+}</code></pre>
+
+                    <h2>4. Micro Frontend Architecture</h2>
+                    <p>
+                        Micro frontend mimarisi, büyük ölçekli uygulamaların daha yönetilebilir parçalara bölünmesini sağlıyor. 
+                        Her takım kendi frontend modülünü bağımsız olarak geliştirebiliyor.
+                    </p>
+
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <p>
+                            <strong>İpucu:</strong> Module Federation, micro frontend uygulamaları için popüler bir çözüm haline geldi.
+                        </p>
+                    </div>
+
+                    <h2>5. Progressive Web Apps (PWA) 2.0</h2>
+                    <p>
+                        PWA'lar, native uygulama deneyimini web'e getirmeye devam ediyor. Yeni Web API'leri sayesinde 
+                        PWA'lar artık daha güçlü ve yetenekli.
+                    </p>
+
+                    <h3>Yeni PWA Özellikleri:</h3>
+                    <ul>
+                        <li>File System Access API</li>
+                        <li>Web Share Target API</li>
+                        <li>Periodic Background Sync</li>
+                        <li>Contact Picker API</li>
+                    </ul>
+
+                    <h2>Sonuç</h2>
+                    <p>
+                        2025 yılı, web geliştirme için heyecan verici bir dönem. AI destekli araçlar, edge computing, 
+                        Web3 entegrasyonu ve micro frontend mimarileri, geliştiricilere yeni olanaklar sunuyor. 
+                        Bu trendleri takip ederek, daha hızlı, güvenli ve kullanıcı dostu web uygulamaları geliştirebiliriz.
+                    </p>
+
+                    <!-- Tags -->
+                    <div class="post-tags">
+                        <i class="fas fa-tags"></i>
+                        <a href="#" class="tag">Web Development</a>
+                        <a href="#" class="tag">JavaScript</a>
+                        <a href="#" class="tag">AI</a>
+                        <a href="#" class="tag">Web3</a>
+                        <a href="#" class="tag">PWA</a>
+                    </div>
+
+                    <!-- Share Buttons -->
+                    <div class="share-buttons">
+                        <h3>Bu yazıyı paylaş:</h3>
+                        <div class="share-links">
+                            <a href="#" class="share-link twitter" aria-label="Twitter'da paylaş">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="share-link linkedin" aria-label="LinkedIn'de paylaş">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="share-link facebook" aria-label="Facebook'ta paylaş">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="share-link copy" aria-label="Linki kopyala">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Author Bio -->
+                    <div class="author-bio">
+                        <img src="https://via.placeholder.com/100x100/667eea/ffffff?text=KB" alt="Yazar">
+                        <div class="bio-content">
+                            <h3>Yazar Hakkında</h3>
+                            <p>
+                                5+ yıllık deneyime sahip Full Stack Developer. Modern web teknolojileri, 
+                                UI/UX tasarım ve açık kaynak projeler üzerine çalışıyorum.
+                            </p>
+                            <div class="bio-social">
+                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Posts -->
+                    <div class="related-posts">
+                        <h3>İlgili Yazılar</h3>
+                        <div class="related-grid">
+                            <article class="related-item">
+                                <img src="https://via.placeholder.com/300x200/f56565/ffffff?text=UI+Design" alt="UI Design">
+                                <h4>UI/UX Tasarımda Minimalizm</h4>
+                                <p>Kullanıcı deneyimini artıran minimalist tasarım prensipleri...</p>
+                            </article>
+                            <article class="related-item">
+                                <img src="https://via.placeholder.com/300x200/48bb78/ffffff?text=React+Vue" alt="React vs Vue">
+                                <h4>React vs Vue: Hangisini Seçmeli?</h4>
+                                <p>İki popüler JavaScript framework'ünün karşılaştırması...</p>
+                            </article>
+                            <article class="related-item">
+                                <img src="https://via.placeholder.com/300x200/ed8936/ffffff?text=AI+ML" alt="AI & ML">
+                                <h4>Yapay Zeka ve Makine Öğrenmesi</h4>
+                                <p>AI ve ML dünyasına giriş yapmak isteyenler için...</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="comments-section">
+                        <h3>Yorumlar</h3>
+                        <p class="comment-info">
+                            Yorumlar yakında aktif olacak. Düşüncelerinizi paylaşmak için takipte kalın!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hakkımda</h3>
+                    <p>Teknoloji ve tasarım tutkunu bir yazılım geliştiriciyim. Bu blogda deneyimlerimi ve öğrendiklerimi paylaşıyorum.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../about.html">Hakkımda</a></li>
+                        <li><a href="../contact.html">İletişim</a></li>
+                        <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <p><i class="fas fa-envelope"></i> info@example.com</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kişisel Blog. Tüm hakları saklıdır. | <a href="https://github.com">Açık Kaynak</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/blog-post.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+</body>
+</html>

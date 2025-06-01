@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda - Kişisel Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Tema Değiştirici -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Tema Değiştir">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigasyon -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">KB</a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about.html" class="nav-link active">Hakkımda</a>
+                <a href="contact.html" class="nav-link">İletişim</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <div class="about-image animate-fade-in">
+                    <img src="https://via.placeholder.com/300x300/667eea/ffffff?text=Profil" alt="Profil Fotoğrafı">
+                    <div class="image-decoration"></div>
+                </div>
+                <div class="about-text animate-slide-up">
+                    <h1 class="about-title">Merhaba, Ben <span class="text-gradient">Kişisel Blog</span></h1>
+                    <p class="about-subtitle">Full Stack Developer & UI/UX Enthusiast</p>
+                    <p class="about-description">
+                        5+ yıllık deneyime sahip tutkulu bir yazılım geliştiriciyim. Modern web teknolojileri, 
+                        kullanıcı deneyimi tasarımı ve açık kaynak projeler üzerine çalışıyorum. 
+                        Bu blogda teknoloji yolculuğumdaki deneyimlerimi ve öğrendiklerimi paylaşıyorum.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Tamamlanan Proje</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>1000+</h3>
+                            <p>GitHub Katkısı</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>25+</h3>
+                            <p>Mutlu Müşteri</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Yeteneklerim</h2>
+            <div class="skills-grid">
+                <!-- Frontend Skills -->
+                <div class="skill-category animate-on-scroll">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">React.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Vue.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS/SASS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="skill-category animate-on-scroll">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="87"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="83"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="skill-category animate-on-scroll">
+                    <h3><i class="fas fa-tools"></i> Araçlar & Diğer</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Git & GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="experience-section">
+        <div class="container">
+            <h2 class="section-title">Deneyimlerim</h2>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Senior Full Stack Developer</h3>
+                        <span class="timeline-date">2023 - Günümüz</span>
+                        <p class="timeline-company">Tech Innovations Inc.</p>
+                        <p>Modern web uygulamaları geliştirme, takım liderliği ve mimari tasarım kararları.</p>
+                        <div class="timeline-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>AWS</span>
+                            <span>Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Full Stack Developer</h3>
+                        <span class="timeline-date">2021 - 2023</span>
+                        <p class="timeline-company">Digital Solutions Ltd.</p>
+                        <p>E-ticaret platformları ve SaaS uygulamaları geliştirme.</p>
+                        <div class="timeline-tags">
+                            <span>Vue.js</span>
+                            <span>Python</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Frontend Developer</h3>
+                        <span class="timeline-date">2019 - 2021</span>
+                        <p class="timeline-company">Creative Agency</p>
+                        <p>Responsive web tasarımları ve interaktif kullanıcı arayüzleri geliştirme.</p>
+                        <div class="timeline-tags">
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                            <span>jQuery</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts -->
+    <section class="fun-facts">
+        <div class="container">
+            <h2 class="section-title">İlginç Bilgiler</h2>
+            <div class="facts-grid">
+                <div class="fact-card animate-on-scroll">
+                    <i class="fas fa-coffee"></i>
+                    <h3>2500+</h3>
+                    <p>Kahve Fincanı</p>
+                </div>
+                <div class="fact-card animate-on-scroll">
+                    <i class="fas fa-code"></i>
+                    <h3>500K+</h3>
+                    <p>Satır Kod</p>
+                </div>
+                <div class="fact-card animate-on-scroll">
+                    <i class="fas fa-bug"></i>
+                    <h3>1000+</h3>
+                    <p>Bug Çözüldü</p>
+                </div>
+                <div class="fact-card animate-on-scroll">
+                    <i class="fas fa-book"></i>
+                    <h3>50+</h3>
+                    <p>Teknik Kitap</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Birlikte Çalışalım!</h2>
+                <p>Yeni projeler ve işbirlikleri için her zaman açığım.</p>
+                <a href="contact.html" class="btn btn-primary">İletişime Geç</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hakkımda</h3>
+                    <p>Teknoloji ve tasarım tutkunu bir yazılım geliştiriciyim. Bu blogda deneyimlerimi ve öğrendiklerimi paylaşıyorum.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">Hakkımda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                        <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <p><i class="fas fa-envelope"></i> info@example.com</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kişisel Blog. Tüm hakları saklıdır. | <a href="https://github.com">Açık Kaynak</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>

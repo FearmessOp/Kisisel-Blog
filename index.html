@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Blog - Ana Sayfa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Tema Değiştirici -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Tema Değiştir">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigasyon -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">KB</a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Ana Sayfa</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about.html" class="nav-link">Hakkımda</a>
+                <a href="contact.html" class="nav-link">İletişim</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Bölümü -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">
+                Merhaba, Ben <span class="text-gradient">Kişisel Blog</span>
+            </h1>
+            <p class="hero-subtitle animate-slide-up">
+                Yazılım geliştirici, tasarımcı ve teknoloji tutkunu
+            </p>
+            <div class="hero-buttons animate-slide-up-delay">
+                <a href="blog.html" class="btn btn-primary">
+                    <i class="fas fa-book-open"></i> Blog Yazılarım
+                </a>
+                <a href="#featured" class="btn btn-secondary">
+                    <i class="fas fa-arrow-down"></i> Keşfet
+                </a>
+            </div>
+            <div class="hero-social animate-fade-in-delay">
+                <a href="#" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Öne Çıkan Yazılar -->
+    <section id="featured" class="featured-posts">
+        <div class="container">
+            <h2 class="section-title">Öne Çıkan Yazılar</h2>
+            <div class="posts-grid">
+                <article class="post-card animate-on-scroll">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=Blog+1" alt="Blog Yazısı 1">
+                        <span class="post-category">Teknoloji</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Modern Web Geliştirme Trendleri 2025</h3>
+                        <p class="post-excerpt">Web geliştirme dünyasında 2025 yılında öne çıkan trendler ve yeni teknolojiler hakkında detaylı bir inceleme...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> 15 Ocak 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 5 dk okuma</span>
+                        </div>
+                        <a href="blog-posts/post1.html" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="post-card animate-on-scroll">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250/f56565/ffffff?text=Blog+2" alt="Blog Yazısı 2">
+                        <span class="post-category">Tasarım</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">UI/UX Tasarımda Minimalizm</h3>
+                        <p class="post-excerpt">Kullanıcı deneyimini artıran minimalist tasarım prensipleri ve uygulama örnekleri...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> 10 Ocak 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 7 dk okuma</span>
+                        </div>
+                        <a href="blog-posts/post2.html" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="post-card animate-on-scroll">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250/48bb78/ffffff?text=Blog+3" alt="Blog Yazısı 3">
+                        <span class="post-category">Yazılım</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">React vs Vue: Hangisini Seçmeli?</h3>
+                        <p class="post-excerpt">İki popüler JavaScript framework'ünün karşılaştırması ve proje seçiminde dikkat edilmesi gerekenler...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> 5 Ocak 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 10 dk okuma</span>
+                        </div>
+                        <a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Bültenime Abone Ol</h2>
+                <p class="newsletter-subtitle">Yeni yazılarımdan ve projelerimden haberdar olmak için e-posta listemize katılın.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="E-posta adresiniz" required>
+                    <button type="submit" class="btn btn-primary">Abone Ol</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hakkımda</h3>
+                    <p>Teknoloji ve tasarım tutkunu bir yazılım geliştiriciyim. Bu blogda deneyimlerimi ve öğrendiklerimi paylaşıyorum.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">Hakkımda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                        <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <p><i class="fas fa-envelope"></i> info@example.com</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kişisel Blog. Tüm hakları saklıdır. | <a href="https://github.com">Açık Kaynak</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

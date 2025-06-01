@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli - Kişisel Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="login-container" id="loginContainer">
+        <div class="login-box animate-fade-in">
+            <h1 class="login-title">Admin Girişi</h1>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı</label>
+                    <input type="text" id="username" name="username" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" name="password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="btn btn-primary btn-login">
+                    <i class="fas fa-sign-in-alt"></i> Giriş Yap
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel" style="display: none;">
+        <!-- Admin Header -->
+        <header class="admin-header">
+            <div class="admin-header-content">
+                <h1>Admin Paneli</h1>
+                <div class="admin-user">
+                    <span id="adminUsername">Admin</span>
+                    <button class="btn-logout" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i> Çıkış
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Admin Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="admin-nav">
+                <a href="#profile" class="nav-item active" data-section="profile">
+                    <i class="fas fa-user"></i> Profil
+                </a>
+                <a href="#blog-posts" class="nav-item" data-section="blog-posts">
+                    <i class="fas fa-blog"></i> Blog Yazıları
+                </a>
+                <a href="#settings" class="nav-item" data-section="settings">
+                    <i class="fas fa-cog"></i> Ayarlar
+                </a>
+                <a href="#stats" class="nav-item" data-section="stats">
+                    <i class="fas fa-chart-bar"></i> İstatistikler
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Admin Content -->
+        <main class="admin-content">
+            <!-- Profile Section -->
+            <section id="profile" class="admin-section active">
+                <h2>Profil Yönetimi</h2>
+                
+                <div class="profile-card">
+                    <div class="profile-image-section">
+                        <div class="profile-image-container">
+                            <img id="profileImage" src="https://via.placeholder.com/200x200/667eea/ffffff?text=Profil" alt="Profil Fotoğrafı">
+                            <div class="profile-image-overlay">
+                                <label for="profileImageInput" class="upload-btn">
+                                    <i class="fas fa-camera"></i> Değiştir
+                                </label>
+                                <input type="file" id="profileImageInput" accept="image/*" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="profileForm" class="profile-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Ad Soyad</label>
+                                <input type="text" id="fullName" name="fullName" value="Kişisel Blog">
+                            </div>
+                            <div class="form-group">
+                                <label for="title">Ünvan</label>
+                                <input type="text" id="title" name="title" value="Full Stack Developer">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bio">Biyografi</label>
+                            <textarea id="bio" name="bio" rows="4">5+ yıllık deneyime sahip tutkulu bir yazılım geliştiriciyim. Modern web teknolojileri, kullanıcı deneyimi tasarımı ve açık kaynak projeler üzerine çalışıyorum.</textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-posta</label>
+                                <input type="email" id="email" name="email" value="info@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Konum</label>
+                                <input type="text" id="location" name="location" value="İstanbul, Türkiye">
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h3>Sosyal Medya Linkleri</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="github"><i class="fab fa-github"></i> GitHub</label>
+                                    <input type="url" id="github" name="github" placeholder="https://github.com/kullaniciadi">
+                                </div>
+                                <div class="form-group">
+                                    <label for="twitter"><i class="fab fa-twitter"></i> Twitter</label>
+                                    <input type="url" id="twitter" name="twitter" placeholder="https://twitter.com/kullaniciadi">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</label>
+                                    <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/kullaniciadi">
+                                </div>
+                                <div class="form-group">
+                                    <label for="instagram"><i class="fab fa-instagram"></i> Instagram</label>
+                                    <input type="url" id="instagram" name="instagram" placeholder="https://instagram.com/kullaniciadi">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Değişiklikleri Kaydet
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Blog Posts Section -->
+            <section id="blog-posts" class="admin-section">
+                <div class="section-header">
+                    <h2>Blog Yazıları</h2>
+                    <button class="btn btn-primary" id="newPostBtn">
+                        <i class="fas fa-plus"></i> Yeni Yazı
+                    </button>
+                </div>
+
+                <div class="posts-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Başlık</th>
+                                <th>Kategori</th>
+                                <th>Tarih</th>
+                                <th>Durum</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Modern Web Geliştirme Trendleri 2025</td>
+                                <td><span class="badge badge-primary">Teknoloji</span></td>
+                                <td>15 Ocak 2025</td>
+                                <td><span class="badge badge-success">Yayında</span></td>
+                                <td>
+                                    <button class="btn-icon" title="Düzenle"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="Sil"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UI/UX Tasarımda Minimalizm</td>
+                                <td><span class="badge badge-secondary">Tasarım</span></td>
+                                <td>10 Ocak 2025</td>
+                                <td><span class="badge badge-success">Yayında</span></td>
+                                <td>
+                                    <button class="btn-icon" title="Düzenle"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="Sil"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="admin-section">
+                <h2>Site Ayarları</h2>
+                
+                <div class="settings-card">
+                    <form id="settingsForm">
+                        <div class="form-group">
+                            <label for="siteName">Site Adı</label>
+                            <input type="text" id="siteName" name="siteName" value="Kişisel Blog">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="siteDescription">Site Açıklaması</label>
+                            <textarea id="siteDescription" name="siteDescription" rows="3">Teknoloji, tasarım ve yazılım üzerine düşüncelerim</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="primaryColor">Ana Renk</label>
+                            <div class="color-picker">
+                                <input type="color" id="primaryColor" name="primaryColor" value="#667eea">
+                                <input type="text" value="#667eea" class="color-input">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="secondaryColor">İkincil Renk</label>
+                            <div class="color-picker">
+                                <input type="color" id="secondaryColor" name="secondaryColor" value="#764ba2">
+                                <input type="text" value="#764ba2" class="color-input">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Ayarları Kaydet
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section id="stats" class="admin-section">
+                <h2>İstatistikler</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-eye"></i>
+                        <h3>15,234</h3>
+                        <p>Toplam Görüntülenme</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-blog"></i>
+                        <h3>24</h3>
+                        <p>Toplam Yazı</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>156</h3>
+                        <p>Toplam Yorum</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <h3>1,234</h3>
+                        <p>Benzersiz Ziyaretçi</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Son 7 Gün Ziyaretçi İstatistikleri</h3>
+                    <canvas id="visitorChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

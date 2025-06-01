@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Yazıları - Kişisel Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Tema Değiştirici -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Tema Değiştir">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigasyon -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">KB</a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="about.html" class="nav-link">Hakkımda</a>
+                <a href="contact.html" class="nav-link">İletişim</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="container">
+            <h1 class="blog-title animate-fade-in">Blog Yazıları</h1>
+            <p class="blog-subtitle animate-slide-up">Teknoloji, tasarım ve yazılım üzerine düşüncelerim</p>
+            
+            <!-- Kategori Filtreleri -->
+            <div class="category-filters animate-slide-up-delay">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="teknoloji">Teknoloji</button>
+                <button class="filter-btn" data-filter="tasarim">Tasarım</button>
+                <button class="filter-btn" data-filter="yazilim">Yazılım</button>
+                <button class="filter-btn" data-filter="kisisel">Kişisel</button>
+            </div>
+
+            <!-- Arama Kutusu -->
+            <div class="search-box animate-fade-in-delay">
+                <input type="text" id="searchInput" placeholder="Blog yazılarında ara...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Yazıları -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="posts-grid" id="postsGrid">
+                <!-- Blog Post 1 -->
+                <article class="post-card animate-on-scroll" data-category="teknoloji">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250/667eea/ffffff?text=Web+3.0" alt="Web 3.0">
+                        <span class="post-category">Teknoloji</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Web 3.0 ve Merkeziyetsiz İnternet</h3>
+                        <p class="post-excerpt">Blockchain teknolojisi ve Web 3.0'ın geleceği üzerine detaylı bir inceleme. Merkeziyetsiz uygulamalar ve yeni internet paradigması...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> 25 Ocak 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 8 dk okuma</span>
+                        </div>
+                        <a href="blog-posts/web3.html" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="post-card animate-on-scroll" data-category="tasarim">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250/f56565/ffffff?text=UI+Design" alt="UI Design">
+                        <span class="post-category">Tasarım</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">2025 UI Tasarım Trendleri</h3>
+                        <p class="post-excerpt">Neumorphism'den glassmorphism'e, bu yıl öne çıkan tasarım trendleri ve uygulama örnekleri...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> 22 Ocak 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 6 dk okuma</span>
+                        </div>
+                        <a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="post-card animate-on-scroll" data-category="yazilim">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250/48bb78/ffffff?text=Clean+Code" alt="Clean Code">
+                        <span class="post-category">Yazılım</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Temiz Kod Yazmanın 10 Altın Kuralı</h3>
+                        <p class="post-excerpt">Robert C. Martin'in Clean Code kitabından öğrendiğim en önemli prensipleri ve pratik uygulamaları...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> 20 Ocak 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 12 dk okuma</span>
+                        </div>
+                        <a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="post-card animate-on-scroll" data-category="teknoloji">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250/ed8936/ffffff?text=AI+ML" alt="AI & ML">
+                        <span class="post-category">Teknoloji</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Yapay Zeka ve Makine Öğrenmesi Başlangıç Rehberi</h3>
+                        <p class="post-excerpt">AI ve ML dünyasına giriş yapmak isteyenler için temel kavramlar, araçlar ve öğrenme yol haritası...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> 18 Ocak 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 15 dk okuma</span>
+                        </div>
+                        <a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="post-card animate-on-scroll" data-category="kisisel">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250/9f7aea/ffffff?text=Remote+Work" alt="Remote Work">
+                        <span class="post-category">Kişisel</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Uzaktan Çalışma Deneyimim: 2 Yıl Sonra</h3>
+                        <p class="post-excerpt">Pandemi sonrası uzaktan çalışma hayatım, yaşadığım zorluklar, öğrendiklerim ve verimlilik ipuçları...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> 15 Ocak 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 10 dk okuma</span>
+                        </div>
+                        <a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="post-card animate-on-scroll" data-category="yazilim">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250/38b2ac/ffffff?text=DevOps" alt="DevOps">
+                        <span class="post-category">Yazılım</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">DevOps Kültürü ve CI/CD Pipeline Kurulumu</h3>
+                        <p class="post-excerpt">Modern yazılım geliştirme süreçlerinde DevOps'un önemi ve GitHub Actions ile otomatik deployment...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar"></i> 12 Ocak 2025</span>
+                            <span class="post-read-time"><i class="far fa-clock"></i> 20 dk okuma</span>
+                        </div>
+                        <a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sayfalama -->
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hakkımda</h3>
+                    <p>Teknoloji ve tasarım tutkunu bir yazılım geliştiriciyim. Bu blogda deneyimlerimi ve öğrendiklerimi paylaşıyorum.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">Hakkımda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                        <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <p><i class="fas fa-envelope"></i> info@example.com</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kişisel Blog. Tüm hakları saklıdır. | <a href="https://github.com">Açık Kaynak</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>
